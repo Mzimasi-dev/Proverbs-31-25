@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header id="site-header">
+     <nav>
+      <div class="logo"> Proverbs 31:25
+        <a class="logo" href="index.html"></a>
+      </div>
+
+      <ul>
+        <li><a class="about.html">About Us</a>
+        <div class="sub-menu-1">
+          <ul>
+            <li><a class="Our work.html">Our Work</a></li>
+            <li><a class="contact us.html">Contact Us</a></li>
+            <li><a class="Certificates.html">Certificates</a></li>
+          </ul>
+        </div>
+        </li>
+        <li><a class="Donate.html">Donate</a></li>
+        <li><a class="Blog.html">Blog</a></li>
+        <li><a class="Programmes.html">Programmes</a></li>
+      </ul>
+      </nav>
+  </header>
+ <script>
+  const header = document.getElementById("site-header");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+  let lastScrollY = window.scrollY;
+
+  // Sticky scroll logic
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+      header.style.top = "-120px";
+    } else {
+      header.style.top = "0";
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  // Mobile menu toggle
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+</script>
+
+  
+</body>
+</html>
