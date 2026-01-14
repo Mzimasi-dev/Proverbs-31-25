@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -10,28 +12,27 @@
     
     <header id="site-header">
      <nav>
-      <div class="logo"> Proverbs 31:25
-        <a class="logo" href="index.html"></a>
+        <a href="index.html" class="logo">Proverbs 31:25</a>
       </div>
 
       <ul>
         <li><a class="about.html">About Us</a>
         <div class="sub-menu-1">
           <ul>
-            <li><a class="Our work.html">Our Work</a></li>
-            <li><a class="contact us.html">Contact Us</a></li>
-            <li><a class="Certificates.html">Certificates</a></li>
+            <li><a href="Our work.html">Our Work</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+            <li><a href="Certificates.html">Certificates</a></li>
           </ul>
         </div>
         </li>
-        <li><a class="Donate.html">Donate</a></li>
-        <li><a class="Blog.html">Blog</a></li>
-        <li><a class="Programmes.html">Programmes</a></li>
+        <li><a href="Donate.html">Donate</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Programmes.html">Programmes</a></li>
       </ul>
       </nav>
   </header>
 
-   <script>
+  <script>
   const header = document.getElementById("site-header");
   const menuToggle = document.getElementById("menu-toggle");
   const mainNav = document.getElementById("main-nav");
@@ -53,5 +54,148 @@
   });
 </script>
 
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-content">
+    <h1>Donate</h1>
+    <p><a href="index.html">Home</a> / Donate</p>
+  </div>
+</section>
+
+<!-- DONATE SECTION -->
+<section class="donate-section fade-in">
+
+  <div class="donate-intro">
+    <h2>Your Support Changes Lives</h2>
+    <p>
+      Your generosity helps provide dignity, protection, and essential support
+      to girls and women affected by poverty and gender-based violence in South Africa.
+    </p>
+  </div>
+
+  <div class="donate-grid">
+
+    <!-- PAYPAL -->
+    <div class="donate-card">
+      <h3>Donate with PayPal</h3>
+      <p>Secure international donations.</p>
+
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="your-paypal@email.com">
+        <input type="hidden" name="currency_code" value="ZAR">
+        <button type="submit" class="donate-btn">Donate via PayPal</button>
+      </form>
+    </div>
+
+    <!-- PAYFAST -->
+    <div class="donate-card">
+      <h3>Donate with PayFast</h3>
+      <p>Fast & trusted South African payments.</p>
+
+      <form action="https://www.payfast.co.za/eng/process" method="post">
+        <!-- 🔴 Replace with your PayFast details -->
+        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+        <input type="hidden" name="amount" value="100">
+        <input type="hidden" name="item_name" value="Donation">
+        <button type="submit" class="donate-btn">Donate via PayFast</button>
+      </form>
+    </div>
+
+      <img src="images/snapscan-qr.png" alt="SnapScan QR Code" class="qr-code">
+    </div>
+
+    <!-- EFT -->
+    <div class="donate-card">
+      <h3>Donate via EFT</h3>
+      <p>Direct bank transfer details:</p>
+
+      <div class="bank-details">
+        <p><strong>Account Name:</strong> Proverbs 31:25 Foundation</p>
+        <p><strong>Bank:</strong> FNB</p>
+        <p><strong>Account Number:</strong> 1234567890</p>
+        <p><strong>Branch Code:</strong> 250655</p>
+        <p><strong>Reference:</strong> Donation</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOTE -->
+<section class="donate-note">
+  <p>
+    Thank you for your generosity 💜  
+    For receipts or questions, email <strong>info@yourfoundation.org</strong>
+  </p>
+</section>
+
+<!-- FADE-IN SCRIPT -->
+<script>
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script
+
+
+<footer class="footer fade-in">
+  <div class="footer-container">
+
+    <!-- Column 1: Menu -->
+    <div class="footer-column">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: info@jetcleanpro.co.za</p>
+      <p>Office: +27 33 012 501</p>
+      <p>Phone: +27 87 153 2004</p>
+      <p>Location: Pietermaritzburg, South Africa</p>
+    </div>
+
+    <!-- Column 4: Newsletter + Social -->
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+
+     <div class="social-icons">
+  <a href="https://www.facebook.com/yourpage" aria-label="Facebook" target="_blank" class="facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/yourpage" aria-label="Instagram" target="_blank" class="instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.tiktok.com/@yourpage" aria-label="TikTok" target="_blank" class="tiktok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+</div>
+
+
+  <div class="footer-bottom">
+    <p>&copy; Built by Barakhulon Industries.</p>
+  </div>
+</footer>
+
+
+  
 </body>
 </html>
+
+

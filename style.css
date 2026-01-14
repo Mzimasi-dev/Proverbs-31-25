@@ -74,7 +74,7 @@ nav ul li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #683752;
+  background: #96505ce0;
   min-width: 180px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -224,19 +224,35 @@ body {
   background: #8b3858;
 }
 
+/* SECTION STYLING */
 .first-content {
-  min-height: 60vh;
+  min-height: 70vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
+  gap: 1.8rem;
+
+  /* Soft gradient background */
+  background: linear-gradient(
+    135deg,
+    rgba(240, 248, 255, 0.9),
+    rgba(255, 255, 255, 1)
+  );
+  border-radius: 20px;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }
 
 p {
@@ -244,4 +260,480 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .first-content {
+    padding: 3rem 1.2rem;
+    border-radius: 14px;
+  }
+}
+
+/***************************************************************************8 blog page******************************************************************/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* HERO */
+.blog-hero {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #eaf3ff, #ffffff);
+}
+
+.blog-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+.blog-section {
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-section.alt {
+  background: #ffffff;
+}
+
+.blog-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* GRID */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* CARDS */
+.blog-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.blog-card p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+}
+
+/* EXTERNAL LABEL */
+.blog-card.external {
+  border-left: 5px solid #0077cc;
+}
+
+/* HELPLINE */
+.gbv-help {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: #fff3f3;
+  color: #7a0000;
+  font-size: 1.1rem;
+}
+
+
+/***************************************************************************************************************footer**************************************************************************************/
+/* FOOTER BASE */
+.footer {
+  background: #000000; /* matches purple navbar */
+  color: #ffffff;
+  padding: 4rem 1.5rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+/* COLUMNS */
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-column ul li a {
+  color: #e0dbf5;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* TEXT */
+.footer-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0dbf5;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 0.6rem 1rem;
+  background: #ffffff;
+  color: #3b2a75;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.9;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* QUOTE BUTTON */
+.quote-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: #ffffff;
+  color: #3b2a75;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.quote-button:hover {
+  background: #eae6ff;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d6cff0;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.2rem;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BASE ICON STYLE */
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1effa;
+  color: #3b2a75;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.social-icons a:hover {
+  transform: translateY(-4px);
+  color: #fff;
+}
+
+/* BRAND COLORS */
+.social-icons a.facebook:hover {
+  background: #1877f2;
+}
+
+.social-icons a.instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-icons a.tiktok:hover {
+  background: #000000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+/************************************************************************************************************************************Donation page*******************************************************************************/
+
+/* PAGE HEADER */
+.page-header {
+  background: #8b73b7;
+  padding: 2rem 1.5rem;
+}
+
+.page-header-content {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p,
+.page-header a {
+  color: #f2ecff;
+  text-decoration: none;
+}
+
+/* DONATE SECTION */
+.donate-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+.donate-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.donate-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.donate-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* GRID */
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* CARDS */
+.donate-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.donate-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.donate-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTON */
+.donate-btn {
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #3b2a75;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* BANK DETAILS */
+.bank-details {
+  text-align: left;
+  background: #f4f1ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+/* NOTE */
+.donate-note {
+  background: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .donate-card {
+    padding: 2rem;
+  }
+}
+
+/****************************************************************************************************************************About page**************************************************************************************************/
+
+/* MAIN WRAPPER */
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+/* EACH SECTION */
+.about-section {
+  margin-bottom: 6rem;
+}
+
+/* MAIN HEADINGS */
+.about-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+/* DIVIDER LINE */
+.about-section hr {
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* SUB HEADINGS */
+.about-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* PARAGRAPHS */
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin-bottom: 1.8rem;
+}
+
+/* EMPHASIS PARAGRAPH */
+.about-section .highlight {
+  font-weight: 600;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+  }
+
+  .about-section hr {
+    width: 90%;
+  }
 }
