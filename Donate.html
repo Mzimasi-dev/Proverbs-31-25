@@ -69,58 +69,67 @@
     <h2>Your Support Changes Lives</h2>
     <p>
       Your generosity helps provide dignity, protection, and essential support
-      to girls and women affected by poverty and gender-based violence in South Africa.
+      to girls and women affected by poverty in South Africa.
     </p>
   </div>
 
   <div class="donate-grid">
 
-    <!-- PAYPAL -->
-    <div class="donate-card">
-      <h3>Donate with PayPal</h3>
-      <p>Secure international donations.</p>
+    <!-- DONATION BUTTONS -->
+<div class="donation-row">
+  <button class="donate-btn dark">Donate via SnapScan</button>
+  <button class="donate-btn dark">Donate via PayPal</button>
+  <button class="donate-btn dark">Donate via PayFast</button>
+  <button class="donate-btn purple" id="eftBtn">Donate via EFT</button>
+</div>
 
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="your-paypal@email.com">
-        <input type="hidden" name="currency_code" value="ZAR">
-        <button type="submit" class="donate-btn">Donate via PayPal</button>
-      </form>
-    </div>
+<!-- PAYMENT LOGOS -->
+<div class="donation-logos">
+  <img src="images/snapscan.png" alt="SnapScan">
+  <img src="images/paypal.png" alt="PayPal">
+  <img src="images/payfast.png" alt="PayFast">
+  <img src="images/bank-transfer.png" alt="Bank Transfer">
+</div>
 
-    <!-- PAYFAST -->
-    <div class="donate-card">
-      <h3>Donate with PayFast</h3>
-      <p>Fast & trusted South African payments.</p>
+<!-- EFT MODAL -->
+<div class="modal" id="eftModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>EFT Bank Details</h3>
 
-      <form action="https://www.payfast.co.za/eng/process" method="post">
-        <!-- 🔴 Replace with your PayFast details -->
-        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
-        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
-        <input type="hidden" name="amount" value="100">
-        <input type="hidden" name="item_name" value="Donation">
-        <button type="submit" class="donate-btn">Donate via PayFast</button>
-      </form>
-    </div>
+    <p><strong>Account Name:</strong> Aphiwe Mshengu</p>
+    <p><strong>Bank:</strong> TymeBank</p>
+    <p><strong>Account Number:</strong> 51134411570</p>
+    <p><strong>Branch Code:</strong> 678910</p>
+    <p><strong>Account Type:</strong> Transactional Account</p>
+    <p><strong>SWIFT Code:</strong> TYMEZAJJ</p>
+    <p><strong>Reference:</strong> Donation</p>
 
-      <img src="images/snapscan-qr.png" alt="SnapScan QR Code" class="qr-code">
-    </div>
-
-    <!-- EFT -->
-    <div class="donate-card">
-      <h3>Donate via EFT</h3>
-      <p>Direct bank transfer details:</p>
-
-      <div class="bank-details">
-        <p><strong>Account Name:</strong> Proverbs 31:25 Foundation</p>
-        <p><strong>Bank:</strong> FNB</p>
-        <p><strong>Account Number:</strong> 1234567890</p>
-        <p><strong>Branch Code:</strong> 250655</p>
-        <p><strong>Reference:</strong> Donation</p>
-      </div>
-    </div>
-
+    <small>
+      Please email proof of payment if required.<br>
+      Thank you for supporting the cause ❤️
+    </small>
   </div>
-</section>
+</div>
+
+const eftBtn = document.getElementById("eftBtn");
+const modal = document.getElementById("eftModal");
+const closeBtn = document.querySelector(".close");
+
+eftBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
 <!-- NOTE -->
 <section class="donate-note">
@@ -143,8 +152,7 @@
   }, { threshold: 0.2 });
 
   fadeElements.forEach(el => observer.observe(el));
-</script
-
+</script>
 
 <footer class="footer fade-in">
   <div class="footer-container">
@@ -160,12 +168,12 @@
       </ul>
     </div>
 
-    <!-- Column 3: Contact -->
+     <!-- Column 3: Contact -->
     <div class="footer-column">
       <h4>Contact Us</h4>
-      <p>Email: info@jetcleanpro.co.za</p>
-      <p>Office: +27 33 012 501</p>
-      <p>Phone: +27 87 153 2004</p>
+      <p>Email: Proverbsfoundation3125@gmail.com</p>
+      <p>Phone: +27 63 526 5253 </p>
+      <p>ALT Number: +27 69 637 4437 </p>
       <p>Location: Pietermaritzburg, South Africa</p>
     </div>
 
@@ -197,5 +205,6 @@
   
 </body>
 </html>
+
 
 
