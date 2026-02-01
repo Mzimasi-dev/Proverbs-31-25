@@ -269,6 +269,318 @@ p {
   }
 }
 
+/*************************************************************************about*************************************************************************************/
+
+/* Donate Page */
+.donate-about {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.donate-about h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.donate-about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.vision-card {
+  background: #ffffff;
+  padding: 40px 25px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.vision-card i {
+  font-size: 2.5rem;
+  color: #b28b2e;
+  margin-bottom: 15px;
+}
+
+.vision-card h3 {
+  margin-bottom: 10px;
+}
+
+.vision-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Donation Section */
+.donation-section {
+  padding: 90px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.donation-box {
+  max-width: 900px;
+  margin: auto;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.donation-card {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 14px;
+}
+
+.donation-card i {
+  font-size: 2rem;
+  color: #b28b2e;
+  margin-bottom: 15px;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #b28b2e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.donate-btn:hover {
+  background: #9a7726;
+}
+
+/* Founders Section */
+.founders-section {
+  padding: 100px 20px;
+  background: #f4f4f4;
+}
+
+.founders-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Text */
+.founders-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.founders-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 350px;
+}
+
+/* Grid */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.founder-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.founder-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.founder-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* Name */
+.founder-card h4 {
+  margin: 15px 0 5px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* Role */
+.founder-card span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .founders-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .founders-text p {
+    margin: auto;
+  }
+
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .founders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-card img {
+    height: 260px;
+  }
+}
+
+/************************************************************************** our work*********************************************************************/
+/* OUR WORK PAGE */
+.our-work {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.work-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.work-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.work-divider {
+  width: 60px;
+  height: 3px;
+  background: #b28b2e;
+  border: none;
+  margin: 20px auto 40px;
+}
+
+.work-intro {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.work-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Sections */
+.work-section {
+  margin-bottom: 60px;
+}
+
+.work-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.work-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.work-section ul {
+  padding-left: 20px;
+}
+
+.work-section ul li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* CTA Box */
+.work-cta {
+  margin-top: 80px;
+  background: #2f1c6a;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work-cta h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.work-btn {
+  background: #ffffff;
+  color: #2f1c6a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.work-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .work-title {
+    font-size: 2rem;
+  }
+
+  .work-cta {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+
 /***************************************************************************8 blog page******************************************************************/
 
 /***********************

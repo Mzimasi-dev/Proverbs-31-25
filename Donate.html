@@ -48,49 +48,21 @@
   <div class="donate-intro">
     <h2>Your Support Changes Lives</h2>
     <p>
-      Your generosity helps provide dignity, protection, and essential support
-      to girls and women affected by poverty in South Africa.
+      Your generosity helps provide dignity, protection, and essential sanitary
+      support to girls affected by period poverty in South Africa.
     </p>
   </div>
 
-  <!-- ===== PAYFAST + EFT BUTTONS ===== -->
+  <!-- ===== DONATION BUTTON ===== -->
   <div class="donation-row">
-
-    <!-- PAYFAST -->
-    <form action="https://www.payfast.co.za/eng/process" method="post">
-      <!-- PAYFAST REQUIRED FIELDS -->
-      <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
-      <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
-
-      <input type="hidden" name="item_name" value="Donation to Proverbs 31:25 Foundation">
-      <input type="hidden" name="amount" value="">
-
-      <input type="hidden" name="return_url" value="https://yourwebsite.co.za/thank-you">
-      <input type="hidden" name="cancel_url" value="https://yourwebsite.co.za/donate">
-      <input type="hidden" name="notify_url" value="https://yourwebsite.co.za/payfast-itn">
-
-      <button type="submit" class="donate-btn dark">
-        Donate via PayFast
-      </button>
-    </form>
-
-    <!-- EFT -->
     <button class="donate-btn purple" id="eftBtn">
       Donate via EFT
     </button>
-
-  </div>
-
-  <!-- ===== LOGOS ===== -->
-  <div class="donation-logos">
-    <img src="images/payfast.png" alt="PayFast">
-    <img src="images/bank-transfer.png" alt="Bank Transfer">
   </div>
 
 </section>
 
 <!-- ================= EFT MODAL ================= -->
-<!-- ================= EFT MODAL ================= -->
 <div class="modal" id="eftModal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -106,41 +78,18 @@
     <p><strong>Reference:</strong> Donation</p>
 
     <small>
-      Please email proof of payment if required.<br>
-      Thank you for supporting the cause ❤️
+      Thank you for supporting the cause ❤️<br>
+      For proof of payment or queries, please email us.
     </small>
   </div>
 </div>
-
-
-    <!-- ================= EFT MODAL ================= -->
-<div class="modal" id="eftModal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-
-    <h3>EFT Bank Details</h3>
-
-    <p><strong>Account Name:</strong> Aphiwe Mshengu</p>
-    <p><strong>Bank:</strong> TymeBank</p>
-    <p><strong>Account Number:</strong> 51134411570</p>
-    <p><strong>Branch Code:</strong> 678910</p>
-    <p><strong>Account Type:</strong> Transactional Account</p>
-    <p><strong>SWIFT Code:</strong> TYMEZAJJ</p>
-    <p><strong>Reference:</strong> Donation</p>
-
-    <small>
-      Please email proof of payment if required.<br>
-      Thank you for supporting the cause ❤️
-    </small>
-  </div>
-</div>
-
 
 <!-- ================= NOTE ================= -->
 <section class="donate-note">
   <p>
     Thank you for your generosity 💜  
-    For receipts or questions, email <strong>Proverbsfoundation3125@gmail.com</strong>
+    For receipts or questions, email
+    <strong>Proverbsfoundation3125@gmail.com</strong>
   </p>
 </section>
 
@@ -154,7 +103,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="Donate.html">Donate</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact us.html">Contact</a></li>
       </ul>
     </div>
 
@@ -198,28 +147,25 @@ const eftBtn = document.getElementById("eftBtn");
 const modal = document.getElementById("eftModal");
 const closeBtn = document.querySelector(".close");
 
-function openModal() {
+eftBtn.addEventListener("click", () => {
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
-}
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
 
 function closeModal() {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 }
-
-eftBtn.addEventListener("click", openModal);
-closeBtn.addEventListener("click", closeModal);
-
-// Click outside modal
-modal.addEventListener("click", e => {
-  if (e.target === modal) closeModal();
-});
-
-// ESC key support
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeModal();
-});
 
 /* FADE IN */
 const observer = new IntersectionObserver(entries => {
@@ -233,3 +179,4 @@ document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
 </body>
 </html>
+
