@@ -271,66 +271,96 @@ p {
 
 /***************************************************************************8 blog page******************************************************************/
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f7f9fc;
-  color: #333;
-}
+/***********************
+ BLOG PAGE – SAFE ADDON
+ Does NOT override main CSS
+***********************/
 
-/* HERO */
-.blog-hero {
-  padding: 5rem 1.5rem;
+/* PAGE HEADER */
+.page-header {
+  background: linear-gradient(135deg, #96505ce0, #813c78);
+  padding: 4rem 1.5rem;
   text-align: center;
-  background: linear-gradient(135deg, #eaf3ff, #ffffff);
+  color: #fff;
 }
 
-.blog-hero h1 {
-  font-size: 3rem;
+.page-header-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-content p {
+  font-size: 1rem;
+}
+
+.page-header-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* BLOG HEADER */
+.blog-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.blog-header h1 {
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-.blog-hero p {
+.blog-header .verse {
+  font-style: italic;
+  color: #666;
   max-width: 700px;
   margin: auto;
-  font-size: 1.2rem;
 }
 
-/* SECTIONS */
-.blog-section {
-  padding: 4rem 1.5rem;
-  max-width: 1200px;
-  margin: auto;
+/* CATEGORY FILTERS */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem 1.5rem;
 }
 
-.blog-section.alt {
-  background: #ffffff;
+.category {
+  border: 1px solid #813c78;
+  background: transparent;
+  color: #813c78;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.blog-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
+.category:hover,
+.category.active {
+  background: #813c78;
+  color: #fff;
 }
 
-/* GRID */
+/* BLOG GRID */
 .blog-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* CARDS */
 .blog-card {
   background: #fff;
+  border-radius: 14px;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .blog-card h3 {
@@ -343,24 +373,27 @@ body {
 }
 
 .blog-card a {
-  text-decoration: none;
-  color: #0077cc;
   font-weight: 600;
+  color: #813c78;
+  text-decoration: none;
 }
 
-/* EXTERNAL LABEL */
-.blog-card.external {
-  border-left: 5px solid #0077cc;
+.blog-card a:hover {
+  text-decoration: underline;
 }
 
-/* HELPLINE */
-.gbv-help {
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  background: #fff3f3;
-  color: #7a0000;
-  font-size: 1.1rem;
+/* FADE IN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
 }
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /***************************************************************************************************************footer**************************************************************************************/
@@ -552,171 +585,306 @@ body {
 
 /************************************************************************************************************************************Donation page*******************************************************************************/
 
-/* DONATION BUTTON ROW */
+/*********************************
+ DONATE PAGE – PROFESSIONAL POLISH
+*********************************/
+
+/* DONATE SECTION */
+.donate-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
+
+/* INTRO */
+.donate-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #3b2a75;
+}
+
+.donate-intro p {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* BUTTON ROW */
 .donation-row {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-bottom: 60px;
+  align-items: stretch;
+  gap: 2rem;
+  margin: 2.5rem 0 3.5rem;
   flex-wrap: wrap;
 }
 
+/* PAYFAST FORM */
+.donation-row form {
+  display: flex;
+  justify-content: center;
+}
+
+/* DONATE BUTTONS */
 .donate-btn {
-  border: none;
-  padding: 16px 28px;
-  font-size: 15px;
+  min-width: 260px;
+  padding: 1rem 2.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  min-width: 210px;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .donate-btn.dark {
-  background: #2f2f2f;
+  background: linear-gradient(135deg, #2f2f2f, #1e1e1e);
 }
 
 .donate-btn.purple {
-  background: #6f4bc2;
+  background: linear-gradient(135deg, #6f4bc2, #3b2a75);
 }
 
+/* HOVER EFFECT */
 .donate-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+/* LOGOS */
+.donation-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
   opacity: 0.9;
 }
 
-/* LOGOS SECTION */
-.donation-logos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
-  align-items: center;
-  justify-items: center;
-  margin-top: 40px;
-}
-
 .donation-logos img {
-  max-width: 180px;
-  height: auto;
+  max-width: 160px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-  .donation-logos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+.donation-logos img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* NOTE */
+.donate-note {
+  background: #f6f4fb;
+  padding: 2rem 1.5rem;
+  margin-top: 4rem;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.donate-note p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* MODAL POLISH */
+.modal-content {
+  text-align: left;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-/* EFT MODAL */
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .donate-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .donation-row {
+    gap: 1.5rem;
+  }
+
+  .donate-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .donation-logos {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* BLUR BACKDROP */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* MODAL CARD */
 .modal-content {
-  background: #fff;
-  max-width: 420px;
-  margin: 10% auto;
-  padding: 30px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  max-width: 480px;
+  width: 90%;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
   position: relative;
+  animation: scaleIn 0.35s ease;
 }
 
+/* CLOSE BUTTON */
+.modal .close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal .close:hover {
+  color: #000;
+}
+
+/* MODAL TEXT */
 .modal-content h3 {
-  margin-top: 0;
-  color: #6f4bc2;
+  margin-bottom: 1.5rem;
+  color: #3b2a75;
+  text-align: center;
 }
 
 .modal-content p {
-  margin: 8px 0;
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 .modal-content small {
   display: block;
-  margin-top: 18px;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* ANIMATION */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*********************************
+ EFT MODAL – CENTER + BLUR
+*********************************/
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  max-width: 480px;
+  width: 90%;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  position: relative;
+  animation: scaleIn 0.35s ease;
+}
+
+.modal .close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 1.6rem;
+  cursor: pointer;
   color: #666;
 }
 
-.close {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/****************************************************************************************************************************About page**************************************************************************************************/
-
-/* MAIN WRAPPER */
-.about-page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 5rem 1.5rem;
-}
-
-/* EACH SECTION */
-.about-section {
-  margin-bottom: 6rem;
-}
-
-/* MAIN HEADINGS */
-.about-section h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 500;
-  margin-bottom: 1.2rem;
-}
-
-/* DIVIDER LINE */
-.about-section hr {
-  width: 70%;
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  border: none;
-  border-top: 1px solid #e0e0e0;
-}
-
-/* SUB HEADINGS */
-.about-section h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
-/* PARAGRAPHS */
-.about-section p {
-  font-size: 1rem;
-  line-height: 1.9;
-  max-width: 900px;
-  margin-bottom: 1.8rem;
-}
-
-/* EMPHASIS PARAGRAPH */
-.about-section .highlight {
-  font-weight: 600;
+.modal .close:hover {
   color: #000;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .about-section h1 {
-    font-size: 1.8rem;
-  }
+.modal-content h3 {
+  margin-bottom: 1.5rem;
+  color: #3b2a75;
+  text-align: center;
+}
 
-  .about-section p {
-    font-size: 0.95rem;
-  }
+.modal-content p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
 
-  .about-section hr {
-    width: 90%;
+.modal-content small {
+  display: block;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
+.modal {
+  display: none; /* 👈 this is critical */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
 
 /**************************************************************************************************************************contact page***********************************************************************************/
 /* HEADER */
@@ -792,5 +960,180 @@ body {
 @media (max-width: 768px) {
   .contact-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/********************************************************************************certificate******************************************************************************/
+
+/* Certificates Coming Soon Section */
+.certificates-coming {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.certificates-coming .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certificates-coming h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.certificates-coming p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Coming Soon Card */
+.coming-soon-box {
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon Styling */
+.coming-soon-box i {
+  font-size: 3rem;
+  color: #b28b2e; /* gold accent */
+}
+
+/* Text inside card */
+.coming-soon-box p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 600px;
+}
+
+/* Fade-in animation (if not already defined) */
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .certificates-coming h2 {
+    font-size: 1.8rem;
+  }
+
+  .coming-soon-box {
+    padding: 30px 20px;
+  }
+}
+
+/***********************************************************programmes*********************************/
+
+/* Programmes Section */
+.programmes-section {
+  padding: 90px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Grid */
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.programme-card {
+  background: #f9f9f9;
+  padding: 40px 25px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programme-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.programme-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: #b28b2e;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+/* Card Text */
+.programme-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.programme-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.programme-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #b28b2e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.programme-btn:hover {
+  background: #9a7726;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
   }
 }

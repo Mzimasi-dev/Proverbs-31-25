@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <!-- ✅ Correct viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blog</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-   <header id="site-header">
-     <nav>
-        <a href="index.html" class="logo">Proverbs 31:25</a>
-      </div>
+<!-- ================= HEADER ================= -->
+<header id="site-header">
+  <nav>
 
-      <ul>
-        <li><a class="about.html">About Us</a>
+    <a href="index.html" class="logo">Proverbs 31:25</a>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <div id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MAIN NAV -->
+    <ul id="main-nav">
+      <li>
+        <a href="about.html">About Us</a>
         <div class="sub-menu-1">
           <ul>
             <li><a href="Our work.html">Our Work</a></li>
@@ -24,132 +39,75 @@
             <li><a href="Certificates.html">Certificates</a></li>
           </ul>
         </div>
-        </li>
-        <li><a href="Donate.html">Donate</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="Programmes.html">Programmes</a></li>
-      </ul>
-      </nav>
-  </header>
+      </li>
 
-  <script>
-  const header = document.getElementById("site-header");
-  const menuToggle = document.getElementById("menu-toggle");
-  const mainNav = document.getElementById("main-nav");
-  let lastScrollY = window.scrollY;
+      <li><a href="Donate.html">Donate</a></li>
+      <li><a href="Blog.html" class="active">Blog</a></li>
+      <li><a href="Programmes.html">Programmes</a></li>
+    </ul>
 
-  // Sticky scroll logic
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-      header.style.top = "-120px";
-    } else {
-      header.style.top = "0";
-    }
-    lastScrollY = window.scrollY;
-  });
+  </nav>
+</header>
 
-  // Mobile menu toggle
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-</script>
-
+<!-- ================= PAGE HEADER ================= -->
 <section class="page-header">
   <div class="page-header-content">
-    <h1>Donate</h1>
+    <h1>Blog</h1>
     <p><a href="index.html">Home</a> / Blog</p>
   </div>
 </section>
 
-<section class="blog-hero">
-  <h1>GBV Awareness & Resources</h1>
-  <p>Educating, empowering, and supporting communities across South Africa.</p>
-</section>
-
-<!-- YOUR BLOG POSTS -->
-<section class="blog-section">
-  <h2>Our GBV Articles</h2>
-
-  <div class="blog-grid">
-    <article class="blog-card">
-      <h3>Understanding Gender-Based Violence</h3>
-      <p>An overview of GBV in South Africa, its impact, and how communities can help.</p>
-      <a href="gbv-awareness.html">Read more</a>
-    </article>
-
-    <article class="blog-card">
-      <h3>How to Support Survivors</h3>
-      <p>Practical ways to support survivors with dignity, safety, and care.</p>
-      <a href="support-survivors.html">Read more</a>
-    </article>
-  </div>
-</section>
-
-<!-- EXTERNAL GBV RESOURCES -->
-<section class="blog-section alt">
-  <h2>Trusted GBV Resources (South Africa)</h2>
-
-  <div class="blog-grid">
-    <article class="blog-card external">
-      <h3>Sonke Gender Justice</h3>
-      <p>Leading civil society organisation working to prevent GBV in SA.</p>
-      <a href="https://sonke.org.za" target="_blank">Visit Website</a>
-    </article>
-
-    <article class="blog-card external">
-      <h3>People Opposing Women Abuse (POWA)</h3>
-      <p>Support, counselling, and advocacy for survivors of abuse.</p>
-      <a href="https://powa.co.za" target="_blank">Visit Website</a>
-    </article>
-
-    <article class="blog-card external">
-      <h3>SA GBV Command Centre</h3>
-      <p>Government-led GBV support services and emergency help.</p>
-      <a href="https://www.gov.za/gbv" target="_blank">Visit Website</a>
-    </article>
-  </div>
-</section>
-
-<!-- HELPLINE -->
-<section class="gbv-help">
-  <p>
-    <strong>Need Help?</strong><br>
-    GBV Command Centre: <strong>0800 428 428</strong> | SMS *120*7867#
+<!-- ================= BLOG INTRO ================= -->
+<header class="blog-header fade-in">
+  <h1>Proverbs 31:25 Foundation</h1>
+  <p class="verse">
+    “She is clothed with strength and dignity; she can laugh at the days to come.”
+    <br>– Proverbs 31:25
   </p>
+</header>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories fade-in">
+  <button class="category active" data-filter="all">All</button>
+  <button class="category" data-filter="Faith">Faith</button>
+  <button class="category" data-filter="Education">Education</button>
+  <button class="category" data-filter="Health">Health</button>
+  <button class="category" data-filter="GBV">GBV</button>
 </section>
 
+<!-- ================= BLOG GRID ================= -->
+<section class="blog-grid">
 
+  <article class="blog-card fade-in" data-category="Faith">
+    <h3>Clothed With Strength & Dignity</h3>
+    <p>Inspired by Proverbs 31:25, this post explores faith, courage, and identity.</p>
+    <a href="#">Read more</a>
+  </article>
 
+  <article class="blog-card fade-in" data-category="Health">
+    <h3>Ending Period Poverty</h3>
+    <p>Why access to sanitary products is essential for dignity and education.</p>
+    <a href="#">Read more</a>
+  </article>
 
+  <article class="blog-card fade-in" data-category="Education">
+    <h3>Why Mentorship Matters</h3>
+    <p>Positive guidance helps girls walk confidently into their future.</p>
+    <a href="#">Read more</a>
+  </article>
 
+  <article class="blog-card fade-in" data-category="GBV">
+    <h3>Understanding Gender-Based Violence</h3>
+    <p>Breaking the silence and supporting safer communities.</p>
+    <a href="#">Read more</a>
+  </article>
 
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ================= FOOTER ================= -->
 <footer class="footer fade-in">
   <div class="footer-container">
 
-    <!-- Column 1: Menu -->
     <div class="footer-column">
       <h4>Menu</h4>
       <ul>
@@ -160,39 +118,88 @@
       </ul>
     </div>
 
-    <!-- Column 3: Contact -->
     <div class="footer-column">
       <h4>Contact Us</h4>
       <p>Email: Proverbsfoundation3125@gmail.com</p>
-      <p>Phone: +27 63 526 5253 </p>
-      <p>ALT Number: +27 69 637 4437 </p>
-      <p>Location: Pietermaritzburg, South Africa</p>
+      <p>Phone: +27 63 526 5253</p>
+      <p>ALT: +27 69 637 4437</p>
+      <p>Pietermaritzburg, South Africa</p>
     </div>
 
-    <!-- Column 4: Newsletter + Social -->
     <div class="footer-column">
       <h4>Stay Connected</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/yourpage" target="_blank" class="instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@yourpage" target="_blank" class="tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
 
-     <div class="social-icons">
-  <a href="https://www.facebook.com/yourpage" aria-label="Facebook" target="_blank" class="facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/yourpage" aria-label="Instagram" target="_blank" class="instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@yourpage" aria-label="TikTok" target="_blank" class="tiktok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-</div>
-
+  </div>
 
   <div class="footer-bottom">
     <p>&copy; Built by Barakhulon Industries.</p>
   </div>
 </footer>
 
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+/* ===== Sticky Header ===== */
+const header = document.getElementById("site-header");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  header.style.top = window.scrollY > lastScrollY ? "-120px" : "0";
+  lastScrollY = window.scrollY;
+});
+
+/* ===== Mobile Menu ===== */
+const menuToggle = document.getElementById("menu-toggle");
+const mainNav = document.getElementById("main-nav");
+
+menuToggle.addEventListener("click", () => {
+  mainNav.classList.toggle("open");
+});
+
+/* ===== Fade-in Animation ===== */
+const faders = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+
+/* ===== Category Filter ===== */
+const buttons = document.querySelectorAll(".category");
+const cards = document.querySelectorAll(".blog-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      card.style.display =
+        filter === "all" || card.dataset.category === filter
+        ? "block"
+        : "none";
+    });
+  });
+});
+</script>
 
 </body>
 </html>

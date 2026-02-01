@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <!-- ✅ Correct viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-   <header id="site-header">
-     <nav>
-        <a href="index.html" class="logo">Proverbs 31:25</a>
-      </div>
 
-      <ul>
-        <li><a class="about.html">About Us</a>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="site-header">
+  <nav>
+
+    <a href="index.html" class="logo">Proverbs 31:25</a>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <div id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MAIN NAV -->
+    <ul id="main-nav">
+      <li>
+        <a href="about.html">About Us</a>
         <div class="sub-menu-1">
           <ul>
             <li><a href="Our work.html">Our Work</a></li>
@@ -24,36 +39,17 @@
             <li><a href="Certificates.html">Certificates</a></li>
           </ul>
         </div>
-        </li>
-        <li><a href="Donate.html">Donate</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="Programmes.html">Programmes</a></li>
-      </ul>
-      </nav>
-  </header>
+      </li>
 
-  <script>
-  const header = document.getElementById("site-header");
-  const menuToggle = document.getElementById("menu-toggle");
-  const mainNav = document.getElementById("main-nav");
-  let lastScrollY = window.scrollY;
+      <li><a href="Donate.html">Donate</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Programmes.html">Programmes</a></li>
+    </ul>
 
-  // Sticky scroll logic
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-      header.style.top = "-120px";
-    } else {
-      header.style.top = "0";
-    }
-    lastScrollY = window.scrollY;
-  });
+  </nav>
+</header>
 
-  // Mobile menu toggle
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-</script>
-
+<!-- ================= PAGE HEADER ================= -->
 <section class="page-header">
   <div class="page-header-content">
     <h1>Contact Us</h1>
@@ -61,7 +57,8 @@
   </div>
 </section>
 
-<section class="contact-page">
+<!-- ================= CONTACT PAGE ================= -->
+<section class="contact-page fade-in">
 
   <div class="contact-header">
     <h1>Contact Us</h1>
@@ -72,23 +69,23 @@
 
     <!-- CONTACT FORM -->
     <form
-      action="mailto:info@yourfoundation.org"
+      action="mailto:Proverbsfoundation3125@gmail.com"
       method="post"
       enctype="text/plain"
       class="contact-form"
     >
 
-      <label>Full Name</label>
-      <input type="text" name="Name" required>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Name" required>
 
-      <label>Email Address</label>
-      <input type="email" name="Email" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" required>
 
-      <label>Subject</label>
-      <input type="text" name="Subject">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="Subject">
 
-      <label>Message</label>
-      <textarea name="Message" rows="5" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" rows="5" required></textarea>
 
       <button type="submit">Send Message</button>
 
@@ -99,49 +96,17 @@
       <h3>Our Contact Details</h3>
       <p><strong>Email:</strong> Proverbsfoundation3125@gmail.com</p>
       <p><strong>Phone:</strong> +27 63 526 5253</p>
-      <p><strong> alt Number:</strong> +27 69 637 4437</p>
+      <p><strong>Alt Number:</strong> +27 69 637 4437</p>
       <p><strong>Location:</strong> Pietermaritzburg, South Africa</p>
     </div>
 
+  </div>
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ================= FOOTER ================= -->
 <footer class="footer fade-in">
   <div class="footer-container">
 
-    <!-- Column 1: Menu -->
     <div class="footer-column">
       <h4>Menu</h4>
       <ul>
@@ -152,40 +117,68 @@
       </ul>
     </div>
 
-     <!-- Column 3: Contact -->
     <div class="footer-column">
       <h4>Contact Us</h4>
       <p>Email: Proverbsfoundation3125@gmail.com</p>
-      <p>Phone: +27 63 526 5253 </p>
-      <p>ALT Number: +27 69 637 4437 </p>
-      <p>Location: Pietermaritzburg, South Africa</p>
+      <p>Phone: +27 63 526 5253</p>
+      <p>ALT: +27 69 637 4437</p>
+      <p>Pietermaritzburg, South Africa</p>
     </div>
 
-    <!-- Column 4: Newsletter + Social -->
     <div class="footer-column">
       <h4>Stay Connected</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/yourpage" target="_blank" class="instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@yourpage" target="_blank" class="tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
 
-     <div class="social-icons">
-  <a href="https://www.facebook.com/yourpage" aria-label="Facebook" target="_blank" class="facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/yourpage" aria-label="Instagram" target="_blank" class="instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@yourpage" aria-label="TikTok" target="_blank" class="tiktok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-</div>
-
+  </div>
 
   <div class="footer-bottom">
     <p>&copy; Built by Barakhulon Industries.</p>
   </div>
 </footer>
 
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+/* ===== Sticky Header ===== */
+const header = document.getElementById("site-header");
+let lastScrollY = window.scrollY;
 
-  
+window.addEventListener("scroll", () => {
+  header.style.top = window.scrollY > lastScrollY ? "-120px" : "0";
+  lastScrollY = window.scrollY;
+});
+
+/* ===== Mobile Menu ===== */
+const menuToggle = document.getElementById("menu-toggle");
+const mainNav = document.getElementById("main-nav");
+
+menuToggle.addEventListener("click", () => {
+  mainNav.classList.toggle("open");
+});
+
+/* ===== Fade-in Animation ===== */
+const faders = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>

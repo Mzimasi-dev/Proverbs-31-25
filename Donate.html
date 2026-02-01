@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Donate | Proverbs 31:25</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    
-    <header id="site-header">
-     <nav>
-        <a href="index.html" class="logo">Proverbs 31:25</a>
-      </div>
 
-      <ul>
-        <li><a class="about.html">About Us</a>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="site-header">
+  <nav>
+    <a href="index.html" class="logo">Proverbs 31:25</a>
+
+    <ul>
+      <li>
+        <a href="about.html">About Us</a>
         <div class="sub-menu-1">
           <ul>
             <li><a href="Our work.html">Our Work</a></li>
@@ -24,37 +26,15 @@
             <li><a href="Certificates.html">Certificates</a></li>
           </ul>
         </div>
-        </li>
-        <li><a href="Donate.html">Donate</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="Programmes.html">Programmes</a></li>
-      </ul>
-      </nav>
-  </header>
+      </li>
+      <li><a href="Donate.html">Donate</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Programmes.html">Programmes</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <script>
-  const header = document.getElementById("site-header");
-  const menuToggle = document.getElementById("menu-toggle");
-  const mainNav = document.getElementById("main-nav");
-  let lastScrollY = window.scrollY;
-
-  // Sticky scroll logic
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-      header.style.top = "-120px";
-    } else {
-      header.style.top = "0";
-    }
-    lastScrollY = window.scrollY;
-  });
-
-  // Mobile menu toggle
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-</script>
-
-<!-- PAGE HEADER -->
+<!-- ================= PAGE HEADER ================= -->
 <section class="page-header">
   <div class="page-header-content">
     <h1>Donate</h1>
@@ -62,7 +42,7 @@
   </div>
 </section>
 
-<!-- DONATE SECTION -->
+<!-- ================= DONATE SECTION ================= -->
 <section class="donate-section fade-in">
 
   <div class="donate-intro">
@@ -73,28 +53,48 @@
     </p>
   </div>
 
-  <div class="donate-grid">
+  <!-- ===== PAYFAST + EFT BUTTONS ===== -->
+  <div class="donation-row">
 
-    <!-- DONATION BUTTONS -->
-<div class="donation-row">
-  <button class="donate-btn dark">Donate via SnapScan</button>
-  <button class="donate-btn dark">Donate via PayPal</button>
-  <button class="donate-btn dark">Donate via PayFast</button>
-  <button class="donate-btn purple" id="eftBtn">Donate via EFT</button>
-</div>
+    <!-- PAYFAST -->
+    <form action="https://www.payfast.co.za/eng/process" method="post">
+      <!-- PAYFAST REQUIRED FIELDS -->
+      <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+      <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
 
-<!-- PAYMENT LOGOS -->
-<div class="donation-logos">
-  <img src="images/snapscan.png" alt="SnapScan">
-  <img src="images/paypal.png" alt="PayPal">
-  <img src="images/payfast.png" alt="PayFast">
-  <img src="images/bank-transfer.png" alt="Bank Transfer">
-</div>
+      <input type="hidden" name="item_name" value="Donation to Proverbs 31:25 Foundation">
+      <input type="hidden" name="amount" value="">
 
-<!-- EFT MODAL -->
+      <input type="hidden" name="return_url" value="https://yourwebsite.co.za/thank-you">
+      <input type="hidden" name="cancel_url" value="https://yourwebsite.co.za/donate">
+      <input type="hidden" name="notify_url" value="https://yourwebsite.co.za/payfast-itn">
+
+      <button type="submit" class="donate-btn dark">
+        Donate via PayFast
+      </button>
+    </form>
+
+    <!-- EFT -->
+    <button class="donate-btn purple" id="eftBtn">
+      Donate via EFT
+    </button>
+
+  </div>
+
+  <!-- ===== LOGOS ===== -->
+  <div class="donation-logos">
+    <img src="images/payfast.png" alt="PayFast">
+    <img src="images/bank-transfer.png" alt="Bank Transfer">
+  </div>
+
+</section>
+
+<!-- ================= EFT MODAL ================= -->
+<!-- ================= EFT MODAL ================= -->
 <div class="modal" id="eftModal">
   <div class="modal-content">
     <span class="close">&times;</span>
+
     <h3>EFT Bank Details</h3>
 
     <p><strong>Account Name:</strong> Aphiwe Mshengu</p>
@@ -112,99 +112,124 @@
   </div>
 </div>
 
-const eftBtn = document.getElementById("eftBtn");
-const modal = document.getElementById("eftModal");
-const closeBtn = document.querySelector(".close");
 
-eftBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.style.display = "block";
-});
+    <!-- ================= EFT MODAL ================= -->
+<div class="modal" id="eftModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+    <h3>EFT Bank Details</h3>
 
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-});
+    <p><strong>Account Name:</strong> Aphiwe Mshengu</p>
+    <p><strong>Bank:</strong> TymeBank</p>
+    <p><strong>Account Number:</strong> 51134411570</p>
+    <p><strong>Branch Code:</strong> 678910</p>
+    <p><strong>Account Type:</strong> Transactional Account</p>
+    <p><strong>SWIFT Code:</strong> TYMEZAJJ</p>
+    <p><strong>Reference:</strong> Donation</p>
 
-<!-- NOTE -->
+    <small>
+      Please email proof of payment if required.<br>
+      Thank you for supporting the cause ❤️
+    </small>
+  </div>
+</div>
+
+
+<!-- ================= NOTE ================= -->
 <section class="donate-note">
   <p>
     Thank you for your generosity 💜  
-    For receipts or questions, email <strong>info@yourfoundation.org</strong>
+    For receipts or questions, email <strong>Proverbsfoundation3125@gmail.com</strong>
   </p>
 </section>
 
-<!-- FADE-IN SCRIPT -->
-<script>
-  const fadeElements = document.querySelectorAll(".fade-in");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  fadeElements.forEach(el => observer.observe(el));
-</script>
-
+<!-- ================= FOOTER ================= -->
 <footer class="footer fade-in">
   <div class="footer-container">
 
-    <!-- Column 1: Menu -->
     <div class="footer-column">
       <h4>Menu</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="service.html">Services</a></li>
+        <li><a href="Donate.html">Donate</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
-     <!-- Column 3: Contact -->
     <div class="footer-column">
       <h4>Contact Us</h4>
       <p>Email: Proverbsfoundation3125@gmail.com</p>
-      <p>Phone: +27 63 526 5253 </p>
-      <p>ALT Number: +27 69 637 4437 </p>
+      <p>Phone: +27 63 526 5253</p>
+      <p>ALT Number: +27 69 637 4437</p>
       <p>Location: Pietermaritzburg, South Africa</p>
     </div>
 
-    <!-- Column 4: Newsletter + Social -->
     <div class="footer-column">
       <h4>Stay Connected</h4>
+      <div class="social-icons">
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
 
-     <div class="social-icons">
-  <a href="https://www.facebook.com/yourpage" aria-label="Facebook" target="_blank" class="facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/yourpage" aria-label="Instagram" target="_blank" class="instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@yourpage" aria-label="TikTok" target="_blank" class="tiktok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-</div>
-
+  </div>
 
   <div class="footer-bottom">
     <p>&copy; Built by Barakhulon Industries.</p>
   </div>
 </footer>
 
+<!-- ================= SCRIPTS ================= -->
+<script>
+/* HEADER HIDE / SHOW */
+const header = document.getElementById("site-header");
+let lastScrollY = window.scrollY;
 
-  
+window.addEventListener("scroll", () => {
+  header.style.top = window.scrollY > lastScrollY ? "-120px" : "0";
+  lastScrollY = window.scrollY;
+});
+
+/* EFT MODAL */
+const eftBtn = document.getElementById("eftBtn");
+const modal = document.getElementById("eftModal");
+const closeBtn = document.querySelector(".close");
+
+function openModal() {
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+eftBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+
+// Click outside modal
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});
+
+// ESC key support
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+/* FADE IN */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
-
-
-

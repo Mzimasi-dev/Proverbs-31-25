@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Certificates</title>
 </head>
 <body>
- <header id="site-header">
-     <nav>
-        <a href="index.html" class="logo">Proverbs 31:25</a>
-      </div>
 
-      <ul>
-        <li><a class="about.html">About Us</a>
+<!-- HEADER -->
+<header id="site-header">
+  <nav id="main-nav">
+    <a href="index.html" class="logo">Proverbs 31:25</a>
+
+    <ul>
+      <li>
+        <a href="about.html">About Us</a>
         <div class="sub-menu-1">
           <ul>
             <li><a href="Our work.html">Our Work</a></li>
@@ -23,21 +29,20 @@
             <li><a href="Certificates.html">Certificates</a></li>
           </ul>
         </div>
-        </li>
-        <li><a href="Donate.html">Donate</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="Programmes.html">Programmes</a></li>
-      </ul>
-      </nav>
-  </header>
+      </li>
 
-  <script>
+      <li><a href="Donate.html">Donate</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Programmes.html">Programmes</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HEADER SCROLL SCRIPT -->
+<script>
   const header = document.getElementById("site-header");
-  const menuToggle = document.getElementById("menu-toggle");
-  const mainNav = document.getElementById("main-nav");
   let lastScrollY = window.scrollY;
 
-  // Sticky scroll logic
   window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
       header.style.top = "-120px";
@@ -46,13 +51,9 @@
     }
     lastScrollY = window.scrollY;
   });
-
-  // Mobile menu toggle
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
 </script>
 
+<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="page-header-content">
     <h1>Certificates</h1>
@@ -60,43 +61,35 @@
   </div>
 </section>
 
+<!-- CERTIFICATES PLACEHOLDER CONTENT -->
+<section class="certificates-coming fade-in">
+  <div class="container">
+    <h2>Certificates Coming Soon</h2>
 
+    <p>
+      We are currently compiling and organizing our official certificates,
+      registrations, and supporting documents.
+    </p>
 
+    <p>
+      These certificates reflect our commitment to transparency, accountability,
+      and excellence in serving our community.
+    </p>
 
+    <div class="coming-soon-box">
+      <i class="fa-solid fa-award"></i>
+      <p>
+        Please check back soon as we continue to update this page.
+        Thank you for your patience and support.
+      </p>
+    </div>
+  </div>
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- FOOTER -->
 <footer class="footer fade-in">
   <div class="footer-container">
 
-    <!-- Column 1: Menu -->
     <div class="footer-column">
       <h4>Menu</h4>
       <ul>
@@ -107,39 +100,35 @@
       </ul>
     </div>
 
-    <!-- Column 3: Contact -->
     <div class="footer-column">
       <h4>Contact Us</h4>
       <p>Email: Proverbsfoundation3125@gmail.com</p>
-      <p>Phone: +27 63 526 5253 </p>
-      <p>ALT Number: +27 69 637 4437 </p>
+      <p>Phone: +27 63 526 5253</p>
+      <p>ALT Number: +27 69 637 4437</p>
       <p>Location: Pietermaritzburg, South Africa</p>
     </div>
 
-    <!-- Column 4: Newsletter + Social -->
     <div class="footer-column">
       <h4>Stay Connected</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@yourpage" target="_blank" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
 
-     <div class="social-icons">
-  <a href="https://www.facebook.com/yourpage" aria-label="Facebook" target="_blank" class="facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/yourpage" aria-label="Instagram" target="_blank" class="instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@yourpage" aria-label="TikTok" target="_blank" class="tiktok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-</div>
-
+  </div>
 
   <div class="footer-bottom">
     <p>&copy; Built by Barakhulon Industries.</p>
   </div>
 </footer>
-
 
 </body>
 </html>
